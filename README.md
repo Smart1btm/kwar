@@ -1,2 +1,2 @@
 # kwar
-cek
+dokumen adalah sumber kebenaran mutlak
