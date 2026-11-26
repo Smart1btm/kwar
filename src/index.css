@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-kwar-bg text-kwar-text font-sans antialiased;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-jumbo {
+    @apply min-h-[56px] text-kwar-label rounded-xl font-bold transition-all active:scale-[0.98] disabled:opacity-50 disabled:active:scale-100;
+  }
+  .btn-green {
+    @apply btn-jumbo bg-kwar-green text-white hover:brightness-110;
+  }
+  .btn-red {
+    @apply btn-jumbo bg-kwar-red text-white hover:brightness-110;
+  }
+  .btn-blue {
+    @apply btn-jumbo bg-kwar-blue text-white hover:brightness-110;
+  }
+  .btn-outline {
+    @apply btn-jumbo border-2 border-kwar-text text-kwar-text bg-white hover:bg-kwar-bg-light;
+  }
+  .card-product {
+    @apply bg-white rounded-xl border-2 border-kwar-bg-light shadow-sm active:scale-[0.97] transition-transform;
+  }
+  .status-bar {
+    @apply flex items-center gap-2 px-3 py-2 text-sm font-bold whitespace-nowrap;
+  }
+}
